@@ -19,6 +19,7 @@
 
 3. ECMAScript ES6 (ES2015)
 3.1. Clases
+const y let
 3.2. Arrow Functions
 3.3. Ámbito (this)
 3.4. Operador de propagación
@@ -40,7 +41,7 @@
 5.1. Metadatos de componentes
 5.2. Creación de un componente
 5.3. Data binding
-5.4. Operador de coalescencia nula
+5.4. Operador de coalescencia nula ?? versus ||
 5.5. Anidado de componentes
 5.6. Pasando datos al componente
 5.7. Respondiendo a eventos
@@ -48,14 +49,22 @@
 5.9. Estilos
 5.10. Módulos
 
+12. Testing
+12.1. ¿Qué es la documentación?
+12.2. Beneficios de la documentación
+12.3. Aplicando documentación con DocumentationJS
+12.4. ¿Qué es el testing?
+12.5. Beneficios del testing
+12.6. Tipos de testing
+12.7. Testing con Jasmine
+12.8. Testing con Karma
+12.9. Testing de componentes Angular
+
 6. Directivas
 6.1. Attribute Directives
 6.2. Structural Directives
 
-7. Servicios
-7.1. Servicios
-7.2. Procesado de recursos
-7.3. Clientes RESTful
+
 
 # CLASE 3
 
@@ -68,6 +77,32 @@
 8.6. Rutas con parámetros
 8.7. Usando los parámetros del padre
 8.8. Router Guards
+
+7. Servicios
+7.1. Servicios
+7.2. Procesado de recursos
+7.3. Clientes RESTful
+
+11. HTTP
+11.1. Introducción
+11.2. Implementación
+11.3. Obteniendo datos JSON
+11.4. Por qué implementar un servicio
+11.5. Verificación de tipo de respuesta
+11.6. Leyendo la respuesta completa
+11.7. Manejar errores
+11.8. Obtener los detalles del error
+11.9. Retry
+11.10. Observables y operadores
+11.11. Petición de datos no JSON
+11.12. Enviar datos al servidor
+11.13. Petición POST
+11.14. Petición DELETE
+11.15. Petición PUT
+11.16. Alternativa axios
+
+
+# CLASE 4
 
 9. Formularios
 9.1. Introducción
@@ -92,37 +127,6 @@
 10.5. LowerCasePipe y UpperCasePipe
 10.6. JSONpipe
 10.7. PercentPipe y SlicePipe
-
-# CLASE 4
-
-11. HTTP
-11.1. Introducción
-11.2. Implementación
-11.3. Obteniendo datos JSON
-11.4. Por qué implementar un servicio
-11.5. Verificación de tipo de respuesta
-11.6. Leyendo la respuesta completa
-11.7. Manejar errores
-11.8. Obtener los detalles del error
-11.9. Retry
-11.10. Observables y operadores
-11.11. Petición de datos no JSON
-11.12. Enviar datos al servidor
-11.13. Petición POST
-11.14. Petición DELETE
-11.15. Petición PUT
-11.16. Alternativa axios
-
-12. Testing
-12.1. ¿Qué es la documentación?
-12.2. Beneficios de la documentación
-12.3. Aplicando documentación con DocumentationJS
-12.4. ¿Qué es el testing?
-12.5. Beneficios del testing
-12.6. Tipos de testing
-12.7. Testing con Jasmine
-12.8. Testing con Karma
-12.9. Testing de componentes Angular
 
 13. Animaciones
 13.1. Translate
