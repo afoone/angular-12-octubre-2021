@@ -68,20 +68,11 @@ const y let
 
 # CLASE 3
 
-8. Routing
-8.1. Introducción
-8.2. Imports del Router
-8.3. Configuración
-8.4. Router Outlet
-8.5. Router Links
-8.6. Rutas con parámetros
-8.7. Usando los parámetros del padre
-8.8. Router Guards
-
 7. Servicios
 7.1. Servicios
 7.2. Procesado de recursos
 7.3. Clientes RESTful
+
 
 11. HTTP
 11.1. Introducción
@@ -101,6 +92,16 @@ const y let
 11.15. Petición PUT
 11.16. Alternativa axios
 
+10. Pipes
+10.1. Introducción
+10.2. DatePipe
+10.3. DecimalPipe
+10.4. CurrencyPipe
+10.5. LowerCasePipe y UpperCasePipe
+10.6. JSONpipe
+10.7. PercentPipe y SlicePipe
+
+
 
 # CLASE 4
 
@@ -119,14 +120,16 @@ const y let
 9.12. Enviar formulario con ngSubmit (submit)
 9.13. Formularios Reactivos
 
-10. Pipes
-10.1. Introducción
-10.2. DatePipe
-10.3. DecimalPipe
-10.4. CurrencyPipe
-10.5. LowerCasePipe y UpperCasePipe
-10.6. JSONpipe
-10.7. PercentPipe y SlicePipe
+8. Routing
+8.1. Introducción
+8.2. Imports del Router
+8.3. Configuración
+8.4. Router Outlet
+8.5. Router Links
+8.6. Rutas con parámetros
+8.7. Usando los parámetros del padre
+8.8. Router Guards
+
 
 13. Animaciones
 13.1. Translate

@@ -1,0 +1,24 @@
+<div class="stock-list">
+  <div class="stock-item" *ngFor="let stock of stocks; index as i">
+    <div class="name">{{ stock.name }}</div>
+    <div class="code">{{ stock.code }}</div>
+    <div [class.subiendo]="stock.isSubiendo()" [class.bajando] ="!stock.isSubiendo()" [class.cambio-fuerte] ="stock.cambioFuerte()">
+      {{ stock.price + " €" }}
+    </div>
+
+    <button (click) = "setFavorito(i)" *ngIf="!stock.favorito else fav">Favorito</button>
+    <ng-template #fav><div>*</div></ng-template>
+
+    <div [ngSwitch]="stock.code">
+      <div *ngSwitchCase="'TEL'">
+        Viva Telefónica!
+      </div>
+      <div *ngSwitchCase="'NAT'">
+        Ahora somos Naturgy
+      </div>
+      <div *ngSwitchDefault>
+        Os vais a la porra todos
+      </div>
+    </div>
+  </div>
+</div>

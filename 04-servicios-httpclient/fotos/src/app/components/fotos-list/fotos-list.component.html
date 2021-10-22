@@ -1,0 +1,10 @@
+
+<app-search (doSearch)="search($event)"></app-search>
+
+<div class="fotos-list">
+
+  <div *ngFor="let foto of fotos">
+    <app-foto [item]= "foto" ></app-foto>
+  </div>
+
+</div>
