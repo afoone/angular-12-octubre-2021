@@ -14,12 +14,18 @@ export class FotosListComponent implements OnInit {
 
   ngOnInit(): void {
     // usar el servicio para recuperar las fotos
-    this.search("angular");
+    this.search('');
   }
 
   search(search: string) {
     this.fotosService.getFotos(search).subscribe((res) => {
       this.fotos = res.results;
     });
+  }
+
+  masFotos() {
+    this.fotosService
+      .moreFotos()
+      .subscribe((res) => this.fotos.push(...res.results));
   }
 }

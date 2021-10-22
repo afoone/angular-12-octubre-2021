@@ -7,11 +7,26 @@ import { FotosResponse } from '../models/foto';
   providedIn: 'root',
 })
 export class UnsplashService {
-  constructor(private http: HttpClient) {}
+  private search: string;
+  private page: number;
 
-  public getFotos(search: string = 'valencia'): Observable<FotosResponse> {
+  constructor(private http: HttpClient) {
+    this.search = 'valencia';
+    this.page = 1;
+  }
+
+  public getFotos(search: string | undefined): Observable<FotosResponse> {
+    if (search) this.search = search;
+    this.page = 1;
     return this.http.get<FotosResponse>(
-      `https://api.unsplash.com/search/photos?page=1&query=${search}&client_id=kdbTYS10B0bFv-Ycqo1CNnJu1O_dHNjyXqkPir0j1wE&access_key=BTcQY-lZN9g36D5ogRVpuOG36iHzQRt2RvGtBgJ_JhQ`
+      `https://api.unsplash.com/search/photos?page=1&query=${this.search}&client_id=kdbTYS10B0bFv-Ycqo1CNnJu1O_dHNjyXqkPir0j1wE&access_key=BTcQY-lZN9g36D5ogRVpuOG36iHzQRt2RvGtBgJ_JhQ`
+    );
+  }
+
+  public moreFotos() {
+    this.page++;
+    return this.http.get<FotosResponse>(
+      `https://api.unsplash.com/search/photos?page=1&query=${this.search}&page=${this.page}&client_id=kdbTYS10B0bFv-Ycqo1CNnJu1O_dHNjyXqkPir0j1wE&access_key=BTcQY-lZN9g36D5ogRVpuOG36iHzQRt2RvGtBgJ_JhQ`
     );
   }
 }
