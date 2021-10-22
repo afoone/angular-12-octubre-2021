@@ -1,0 +1,26 @@
+<div class="patient-list">
+  <div>Hoy es {{ today | date: "dd/MM/yyyy" }}</div>
+  <div>Porcentaje: {{ n | percent }}</div>
+  <div>Number: {{ 3.14159 | number: "2.2-2" }}</div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Sex</th>
+        <th>Age</th>
+        <th>Diagnostics</th>
+        <th>Hourly Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of patientService.getPatients() | males: true">
+        <td>{{ patient.name | uppercase }}</td>
+        <!-- <td>{{ patient.name | lowercase }}</td> -->
+        <td>{{ patient.sex }}</td>
+        <td>{{ patient.age | suma: 100 }}</td>
+        <td>{{ patient.diagnostics }}</td>
+        <td>{{ patient.hourlyRate | currency: "EUR" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
