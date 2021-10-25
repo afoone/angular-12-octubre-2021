@@ -101,8 +101,6 @@ const y let
 10.6. JSONpipe
 10.7. PercentPipe y SlicePipe
 
-
-
 # CLASE 4
 
 9. Formularios
@@ -129,7 +127,6 @@ const y let
 8.6. Rutas con parámetros
 8.7. Usando los parámetros del padre
 8.8. Router Guards
-
 
 13. Animaciones
 13.1. Translate

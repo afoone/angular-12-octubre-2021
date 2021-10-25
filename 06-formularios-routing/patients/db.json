@@ -1,0 +1,30 @@
+{
+  "patients": [
+    {
+      "name": "Joe Smith",
+      "sex": "M",
+      "age": 54,
+      "diagnostics": [
+        "malaria"
+      ],
+      "hourlyRate": 67
+    },
+    {
+      "name": "Susan Smith",
+      "sex": "F",
+      "age": 54,
+      "diagnostics": [
+        "covid19",
+        "malaria"
+      ]
+    },
+    {
+      "name": "Babou Ceesay",
+      "sex": "F",
+      "age": 27,
+      "diagnostics": [
+        "malaria"
+      ]
+    }
+  ]
+}
