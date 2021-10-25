@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Patient } from 'src/app/models/patient';
+import { PatientService } from 'src/app/services/patient.service';
 
 @Component({
   selector: 'app-patient-form',
@@ -9,7 +10,10 @@ import { Patient } from 'src/app/models/patient';
 export class PatientFormComponent implements OnInit {
   public patient: Patient;
 
-  constructor() {
+  @Output() public finish: EventEmitter<Patient | undefined> =
+    new EventEmitter();
+
+  constructor(private patientService: PatientService) {
     this.patient = {
       diagnostics: [],
       name: '',
@@ -17,4 +21,14 @@ export class PatientFormComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  onSubmit(): void {
+    this.patientService
+      .addPatient(this.patient)
+      .subscribe((res) => this.finish.emit(res));
+  }
+
+  onCandel(): void {
+    this.finish.emit();
+  }
 }
