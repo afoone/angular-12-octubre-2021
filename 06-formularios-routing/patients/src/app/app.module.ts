@@ -12,6 +12,8 @@ import { PatientFormComponent } from './components/patient-form/patient-form.com
 import { PatientNewViewComponent } from './views/patient-new-view/patient-new-view.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PatientEditViewComponent } from './views/patient-edit-view/patient-edit-view.component';
+import { DiagnosticFormComponent } from './components/diagnostic-form/diagnostic-form.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     PatientFormComponent,
     PatientNewViewComponent,
+    PatientEditViewComponent,
+    DiagnosticFormComponent,
   ],
   imports: [
     BrowserModule,

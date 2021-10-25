@@ -1,4 +1,21 @@
 {
+  "diagnostics": [
+    {
+      "code": "adfsda",
+      "value": "asdfsda",
+      "id": 1
+    },
+    {
+      "code": "",
+      "value": "",
+      "id": 2
+    },
+    {
+      "code": "asd",
+      "value": "sdf",
+      "id": 3
+    }
+  ],
   "patients": [
     {
       "id": 1,
@@ -31,47 +48,11 @@
     },
     {
       "diagnostics": [],
-      "name": "sdaf",
-      "id": 4
-    },
-    {
-      "diagnostics": [],
-      "name": "juanito",
-      "age": 67,
+      "name": "juanito modificado",
+      "age": 72,
       "sex": "M",
-      "hourlyRate": 45,
-      "id": 5
-    },
-    {
-      "diagnostics": [],
-      "name": "juanito",
-      "age": 67,
-      "sex": "M",
-      "hourlyRate": 89802348,
-      "id": 6
-    },
-    {
-      "diagnostics": [],
-      "name": "juanito",
-      "age": 67,
-      "sex": "M",
-      "hourlyRate": 89802348,
-      "id": 7
-    },
-    {
-      "diagnostics": [],
-      "name": "juanito",
-      "age": 723847,
-      "sex": "M",
-      "hourlyRate": 89802348,
+      "hourlyRate": 50,
       "id": 8
-    },
-    {
-      "diagnostics": [],
-      "name": "nuevo",
-      "age": 55,
-      "sex": "M",
-      "id": 9
     },
     {
       "diagnostics": [],
@@ -86,13 +67,6 @@
       "age": 45,
       "sex": "F",
       "id": 11
-    },
-    {
-      "diagnostics": [],
-      "name": "asdf",
-      "age": 23,
-      "sex": "M",
-      "id": 12
     }
   ]
 }

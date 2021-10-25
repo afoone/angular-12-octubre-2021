@@ -7,16 +7,26 @@
         <th>Age</th>
         <th>Diagnostics</th>
         <th>Hourly Rate</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let patient of patients">
+        <td>{{patient.id}}</td>
         <td>{{ patient.name | uppercase }}</td>
         <!-- <td>{{ patient.name | lowercase }}</td> -->
         <td>{{ patient.sex }}</td>
         <td>{{ patient.age }}</td>
         <td>{{ patient.diagnostics }}</td>
         <td>{{ patient.hourlyRate | currency: "EUR" }}</td>
+        <td>
+          <a [routerLink]="['/patients/' + patient.id]">
+            <button class="btn btn-primary">Edit</button>
+          </a>
+          <button class="btn btn-danger" (click)="deleteItem(patient.id)">
+            Delete
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>

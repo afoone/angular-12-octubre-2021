@@ -17,4 +17,11 @@ export class PatientListComponent implements OnInit {
   ngOnInit(): void {
     this.patientService.getPatients().subscribe((res) => (this.patients = res));
   }
+
+  deleteItem = (id: number | undefined) => {
+    if (!id) return;
+    this.patientService.deletePatient(id + '').subscribe(() => {
+      this.patients = this.patients.filter((i) => i.id !== id);
+    });
+  };
 }
