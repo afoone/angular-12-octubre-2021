@@ -1,0 +1,4 @@
+<button (click)="toggle()">mostrar / ocultar</button> Multiplicador
+<input type="number" [(ngModel)]="multiplicador" />
+
+<app-prueba *ngIf="show" [multiplicador]="multiplicador"></app-prueba>
