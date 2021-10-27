@@ -1,0 +1,72 @@
+{
+  "diagnostics": [
+    {
+      "code": "adfsda",
+      "value": "asdfsda",
+      "id": 1
+    },
+    {
+      "code": "",
+      "value": "",
+      "id": 2
+    },
+    {
+      "code": "asd",
+      "value": "sdf",
+      "id": 3
+    }
+  ],
+  "patients": [
+    {
+      "id": 1,
+      "name": "Joe Smith",
+      "sex": "M",
+      "age": 54,
+      "diagnostics": [
+        "malaria"
+      ],
+      "hourlyRate": 67
+    },
+    {
+      "id": 2,
+      "name": "Susan Smith",
+      "sex": "F",
+      "age": 54,
+      "diagnostics": [
+        "covid19",
+        "malaria"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Babou Ceesay",
+      "sex": "F",
+      "age": 27,
+      "diagnostics": [
+        "malaria"
+      ]
+    },
+    {
+      "diagnostics": [],
+      "name": "juanito modificado",
+      "age": 72,
+      "sex": "M",
+      "hourlyRate": 50,
+      "id": 8
+    },
+    {
+      "diagnostics": [],
+      "name": "DAVID",
+      "age": 78,
+      "sex": "M",
+      "id": 10
+    },
+    {
+      "diagnostics": [],
+      "name": "laura",
+      "age": 45,
+      "sex": "F",
+      "id": 11
+    }
+  ]
+}

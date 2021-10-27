@@ -1,0 +1,33 @@
+<h3>Nuevo diagnostico</h3>
+
+<form [formGroup]="diagnosticForm" (ngSubmit)="onSubmit()">
+  <div>
+    Code*:
+    <input
+      type="text"
+      placeholder="Code"
+      formControlName="code"
+      class="form-control"
+      [class.is_invalid]="diagnosticForm.controls['code'].errors && showErrors"
+    />
+  </div>
+  <div
+    class="alert alert-danger"
+    role="alert"
+    *ngIf="diagnosticForm.controls['code'].errors && showErrors"
+  >
+    <span *ngIf="diagnosticForm.controls['code'].errors.required">
+      El campo es requerido
+    </span>
+  </div>
+  <div>
+    Value:
+    <input type="text" placeholder="Value" formControlName="value" />
+  </div>
+
+  <!-- <div *ngIf="!diagnosticForm.valid">El formulario no es valido</div> -->
+
+  <div>
+    <input type="submit" class="btn btn-primary" value="Submit" />
+  </div>
+</form>
