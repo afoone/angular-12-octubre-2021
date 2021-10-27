@@ -1,98 +1,108 @@
 <div class="patient-form">
-  <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="name">Name*</label>
-      <input
-        type="text"
-        class="form-control"
-        id="name"
-        placeholder="Enter patient's name"
-        [(ngModel)]="patient.name"
-        name="name"
-        #name="ngModel"
-        minlength="4"
-        required
-      />
-      <div *ngIf="name.invalid">
-        <small
-          class="form-text"
-          style="color: red"
-          *ngIf="name.errors?.required"
-          >El campo es requerido</small
-        >
-        <small
-          class="form-text"
-          style="color: red"
-          *ngIf="name.errors?.minlength"
-          >Tiene que tener por lo menos cuatro caracteres</small
-        >
+  <mat-card>
+    <mat-card-title>{{ title }}</mat-card-title>
+
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Name*</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Enter patient's name"
+          [(ngModel)]="patient.name"
+          name="name"
+          #name="ngModel"
+          minlength="4"
+          required
+        />
+        <div *ngIf="name.invalid">
+          <small
+            class="form-text"
+            style="color: red"
+            *ngIf="name.errors?.required"
+            >El campo es requerido</small
+          >
+          <small
+            class="form-text"
+            style="color: red"
+            *ngIf="name.errors?.minlength"
+            >Tiene que tener por lo menos cuatro caracteres</small
+          >
+        </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="age">Age</label>
-      <input
-        type="number"
-        class="form-control"
-        id="age"
-        placeholder="Enter patient's age"
-        [(ngModel)]="patient.age"
-        name="age"
-        max="99"
-        min="0"
-        #age="ngModel"
-        required
-      />
-      <div *ngIf="age.invalid">
-        <small class="form-text" style="color: red" *ngIf="age.errors?.required"
-          >El campo es requerido</small
-        >
-        <small class="form-text" style="color: red" *ngIf="age.errors?.max"
-          >Tiene que tener menos de {{ age.errors?.max.max }} años y le has
-          puesto {{ age.errors?.max.actual }} años</small
-        >
-        <small class="form-text" style="color: red" *ngIf="age.errors?.min"
-          >Tiene que tener más de {{ age.errors?.min.min }} años y le has
-          puesto {{ age.errors?.min.actual }} años</small
-        >
-
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input
+          type="number"
+          class="form-control"
+          id="age"
+          placeholder="Enter patient's age"
+          [(ngModel)]="patient.age"
+          name="age"
+          max="99"
+          min="0"
+          #age="ngModel"
+          required
+        />
+        <div *ngIf="age.invalid">
+          <small
+            class="form-text"
+            style="color: red"
+            *ngIf="age.errors?.required"
+            >El campo es requerido</small
+          >
+          <small class="form-text" style="color: red" *ngIf="age.errors?.max"
+            >Tiene que tener menos de {{ age.errors?.max.max }} años y le has
+            puesto {{ age.errors?.max.actual }} años</small
+          >
+          <small class="form-text" style="color: red" *ngIf="age.errors?.min"
+            >Tiene que tener más de {{ age.errors?.min.min }} años y le has
+            puesto {{ age.errors?.min.actual }} años</small
+          >
+        </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="sex">Gender</label>
-      <select
-        name="sex"
-        id="sex"
-        class="form-control"
-        [(ngModel)]="patient.sex"
-        #sex = "ngModel"
-        required
-      >
-        <option value="F">Female</option>
-        <option value="M">Male</option>
-      </select>
-      <div *ngIf="sex.invalid">
-        <small class="form-text" style="color: red" *ngIf="sex.errors?.required"
-          >El campo es requerido</small
+      <div class="form-group">
+        <label for="sex">Gender</label>
+        <select
+          name="sex"
+          id="sex"
+          class="form-control"
+          [(ngModel)]="patient.sex"
+          #sex="ngModel"
+          required
         >
+          <option value="F">Female</option>
+          <option value="M">Male</option>
+        </select>
+        <div *ngIf="sex.invalid">
+          <small
+            class="form-text"
+            style="color: red"
+            *ngIf="sex.errors?.required"
+            >El campo es requerido</small
+          >
+        </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="hourly-rate">Hourly Rate</label>
-      <input
-        type="number"
-        class="form-control"
-        id="hourly-rate"
-        placeholder="Enter patient's hourly-rate"
-        [(ngModel)]="patient.hourlyRate"
-        name="hourly-rate"
-        max="100"
-      />
-    </div>
-
-    <input type="submit" class="btn btn-primary" value="Save" />
-    <input (click)="onCandel()" class="btn btn-warning" value="Cancel" />
-  </form>
+      <div class="form-group">
+        <label for="hourly-rate">Hourly Rate</label>
+        <input
+          type="number"
+          class="form-control"
+          id="hourly-rate"
+          placeholder="Enter patient's hourly-rate"
+          [(ngModel)]="patient.hourlyRate"
+          name="hourly-rate"
+          max="100"
+        />
+      </div>
+      <mat-card-actions>
+        <input type="submit" class="btn btn-primary" value="Save" />
+        <input (click)="onCandel()" class="btn btn-warning" value="Cancel" />
+      </mat-card-actions>
+    </form>
+  </mat-card>
 </div>

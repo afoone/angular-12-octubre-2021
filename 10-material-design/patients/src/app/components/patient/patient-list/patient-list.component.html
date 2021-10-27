@@ -1,33 +1,25 @@
 <div class="patient-list">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Sex</th>
-        <th>Age</th>
-        <th>Diagnostics</th>
-        <th>Hourly Rate</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let patient of patients">
-        <td>{{patient.id}}</td>
-        <td>{{ patient.name | uppercase }}</td>
-        <!-- <td>{{ patient.name | lowercase }}</td> -->
-        <td>{{ patient.sex }}</td>
-        <td>{{ patient.age }}</td>
-        <td>{{ patient.diagnostics }}</td>
-        <td>{{ patient.hourlyRate | currency: "EUR" }}</td>
-        <td>
-          <a [routerLink]="['/patients/' + patient.id]">
-            <button class="btn btn-primary">Edit</button>
-          </a>
-          <button class="btn btn-danger" (click)="deleteItem(patient.id)">
-            Delete
-          </button>
-        </td>
-      </tr>
-    </tbody>
+  <table mat-table [dataSource]="patients" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Nombre
+        <button (click) ="removeColumn('name')">x</button>
+      </th>
+      <td mat-cell *matCellDef="let patient">
+        {{ patient.name }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="sex">
+      <th mat-header-cell *matHeaderCellDef>Sexo</th>
+      <td mat-cell *matCellDef="let patient">{{ patient.sex }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="age">
+      <th mat-header-cell *matHeaderCellDef>Edad</th>
+      <td mat-cell *matCellDef="let patient">{{ patient.age }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns"></tr>
   </table>
 </div>

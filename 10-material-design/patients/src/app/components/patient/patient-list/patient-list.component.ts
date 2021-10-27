@@ -10,7 +10,10 @@ import { PatientService } from 'src/app/services/patient.service';
 export class PatientListComponent implements OnInit {
   public patients: Patient[];
 
+  public columns: Array<string>
+
   constructor(public patientService: PatientService) {
+    this.columns = ['name', 'sex', 'age']
     this.patients = [];
   }
 
@@ -24,4 +27,8 @@ export class PatientListComponent implements OnInit {
       this.patients = this.patients.filter((i) => i.id !== id);
     });
   };
+
+  removeColumn = (name: string) =>  {
+    this.columns = this.columns.filter(i => i !== name)
+  }
 }

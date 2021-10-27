@@ -13,6 +13,9 @@ export class PatientFormComponent implements OnInit {
   @Input('id')
   public patientId: string | undefined;
 
+  @Input()
+  public title: string | undefined
+
   @Output() public finish: EventEmitter<Patient | undefined> =
     new EventEmitter();
 
