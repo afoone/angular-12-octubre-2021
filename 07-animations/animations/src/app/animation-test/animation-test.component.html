@@ -1,6 +1,6 @@
 <button (click)="toggle()">Open / Close</button>
 
-<div>
+<div [@open-close]="open ? 'open' : 'close'">
   El componente está ahora mismo {{ open ? "Abierto" : "Cerrado" }}
 
   <p *ngIf="open">
